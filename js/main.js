@@ -51,6 +51,10 @@ if (id) {
   // Заполняем элементы на странице информацией о рецепте
   document.querySelector(".single-recipe__title").innerText = recipeInfo.label;
   document.querySelector(".single-recipe__img").src = recipeInfo.image;
-  document.querySelector(".single-recipe__text").innerText =
-    "Calories: " + Math.round(recipeInfo.calories);
+  document.querySelector(".single-recipe__text").innerHTML =
+    "Calories: " +
+    Math.round(recipeInfo.calories) +
+    "<br>" +
+    "ужин: " +
+    Math.round(recipeInfo.totalWeight);
 }
