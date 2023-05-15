@@ -422,3 +422,25 @@ img {
 }
 
 /*# sourceMappingURL=style.css.map */
+.info-label {
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 2em
+
+}
+.info-value {
+  font-weight: normal;
+  color: #666;
+}
+/*#ingredients-value::before {*/
+/*  content: "";*/
+/*  display: block;*/
+/*  margin-bottom: 0.5em*/
+/*}*/
+
+.info-value::before {
+  content: "";
+  display: block;
+  margin-bottom: 0.5em
+}
+

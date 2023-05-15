@@ -51,10 +51,21 @@ if (id) {
   // Заполняем элементы на странице информацией о рецепте
   document.querySelector(".single-recipe__title").innerText = recipeInfo.label;
   document.querySelector(".single-recipe__img").src = recipeInfo.image;
-  document.querySelector(".single-recipe__text").innerHTML =
-    "Calories: " +
-    Math.round(recipeInfo.calories) +
-    "<br>" +
-    "ужин: " +
-    Math.round(recipeInfo.totalWeight);
+  document.getElementById("calories-value").innerText = Math.round(
+    recipeInfo.calories
+  );
+  document.getElementById(
+    "ingredient-lines-value"
+  ).innerHTML = `<br>${recipeInfo.ingredientLines.join("<br>")}`;
+  document.getElementById("health-labels-value").innerHTML =
+    recipeInfo.healthLabels.join("<br>");
+  document.getElementById("dish-type-value").innerHTML =
+    recipeInfo.dishType.join("<br>");
+  document.getElementById("ingredients-value").innerHTML =
+    recipeInfo.ingredients.map((ingredients) => ingredients.text).join("<br>");
+  document.getElementById("cuisine-type-value").innerText =
+    recipeInfo.cuisineType;
+  document.getElementById("total-weight-value").innerText = Math.round(
+    recipeInfo.totalWeight
+  );
 }
